@@ -1,10 +1,16 @@
 # Giscus 评论系统配置指南
 
-## 启用 GitHub Discussions
+## 解决 "giscus is not installed" 错误
 
-要使用 Giscus 评论系统，需要先在 GitHub 仓库中启用 Discussions 功能：
+### 第一步：安装 Giscus App
+1. 访问 **GitHub Apps 安装页面**：https://github.com/apps/giscus
+2. 点击 **Install** 按钮
+3. 选择要安装的仓库：
+   - 选择 **Only select repositories**
+   - 勾选 `junjiangao/Notes` 仓库
+4. 点击 **Install** 确认安装
 
-### 1. 启用 Discussions
+### 第二步：启用 GitHub Discussions
 1. 访问你的 GitHub 仓库：https://github.com/junjiangao/Notes
 2. 点击 **Settings** 标签
 3. 向下滚动找到 **Features** 部分
