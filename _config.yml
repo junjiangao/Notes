@@ -1,0 +1,131 @@
+# Site Settings
+title: 个人博客                          # 网站标题
+tagline: 记录技术与生活                    # 网站副标题
+description: >-                         # 网站描述
+  一个用于分享技术学习笔记和生活感悟的个人博客，
+  基于Jekyll构建并托管在GitHub Pages。
+
+url: 'https://junjiangao.github.io'     # 网站URL
+baseurl: '/Notes'                       # 子路径
+
+lang: zh-CN                             # 网站语言
+
+# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
+timezone: Asia/Shanghai
+
+# Jekyll Configuration
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Pagination
+paginate: 10
+paginate_path: "/posts/page:num/"
+
+# SEO
+google_site_verification: # Google 站点验证码 (可选)
+google_analytics:         # Google Analytics 追踪 ID (可选)
+
+# Comments
+comments:
+  active: giscus        # 激活评论系统 (支持 disqus, utterances, giscus)
+  
+  # Giscus 配置 (需要在 GitHub 仓库启用 Discussions)
+  giscus:
+    repo: junjiangao/Notes              # GitHub 仓库名称
+    repo_id: # 仓库 ID (需要通过 GitHub GraphQL API 获取)
+    category: General                   # Discussion 分类名称
+    category_id: # 分类 ID (需要通过 GitHub GraphQL API 获取)
+    mapping: pathname                   # 页面-评论映射方式
+    input_position: bottom              # 评论框位置 (top/bottom)
+    lang: zh-CN                        # 界面语言
+    reactions_enabled: 1                # 启用表情回应
+
+# Social Links
+github:
+  username: junjiangao     # GitHub 用户名
+
+social:
+  name: Junjian Gao       # 作者真实姓名
+  email: # 邮箱地址 (可选)
+  links:
+    - https://github.com/junjiangao
+
+# Build Settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap  
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-archives
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    category: '/categories/:name/'
+    tag: '/tags/:name/'
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# HTML Compression
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  ignore:
+    envs: [development]
+
+# Exclude from processing
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - tools/
+  - docs/
+
+defaults:
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      pin: false
+  - scope:
+      path: _posts
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+  - scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
+
+# Theme
+theme: jekyll-theme-chirpy

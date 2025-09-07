@@ -1,0 +1,44 @@
+---
+layout: page
+title: 404
+permalink: /404.html
+redirect_from:
+  - /404/
+---
+
+<div class="text-center">
+  <h1 class="display-1">404</h1>
+  <h2>页面未找到</h2>
+  <p class="lead">抱歉，您访问的页面不存在。</p>
+  
+  <div class="mt-4">
+    <a href="{{ '/' | relative_url }}" class="btn btn-primary">
+      <i class="fas fa-home"></i> 返回首页
+    </a>
+    <a href="{{ '/archives/' | relative_url }}" class="btn btn-outline-secondary">
+      <i class="fas fa-archive"></i> 浏览归档
+    </a>
+  </div>
+  
+  <div class="mt-5">
+    <h4>您可能在寻找：</h4>
+    <ul class="list-unstyled">
+      <li><a href="{{ '/about/' | relative_url }}">关于页面</a></li>
+      <li><a href="{{ '/categories/' | relative_url }}">文章分类</a></li>
+      <li><a href="{{ '/tags/' | relative_url }}">标签云</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+// 简单的搜索建议功能
+document.addEventListener('DOMContentLoaded', function() {
+  const path = window.location.pathname;
+  console.log('404 页面：', path);
+  
+  // 可以在这里添加更多的逻辑，比如：
+  // 1. 记录 404 错误
+  // 2. 提供搜索建议
+  // 3. 自动重定向到相似页面
+});
+</script>
